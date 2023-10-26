@@ -1,14 +1,18 @@
 def encode(password):  # Encoding function, iterates through each character and adds 3
     encoded = ""
     for x in str(password):
-        print (x)
-        encoded += str((int(x) + 3)%10)
+        encoded += str((int(x) + 3) % 10)  # add space
     return encoded
 
 
 def decode(encoded):
     decoded = ""
     # insert decode function here
+    for character in encoded:
+        decoded_character = (int(character) - 3)
+        if decoded_character < 0:
+            decoded_character += 10  # add 10 if value less than 0
+        decoded += str(decoded_character)
     return decoded
 
 
