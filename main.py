@@ -1,7 +1,6 @@
 def encode(password):  # Encoding function, iterates through each character and adds 3
     encoded = ""
     for x in str(password):
-        print (x)
         encoded += str((int(x) + 3)%10)
     return encoded
 
